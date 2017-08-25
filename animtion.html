@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <style>
+		.qwe{ width: 300px; height: 300px; background: #333; animation-name:qwe; animation-duration:10s; animation-timing-function: linear; }
+		.qwe:hover{ animation-play-state: paused;  }
+		.asd{ width: 300px; height: 300px; background: #ccc; }
+		@-webkit-keyframes qwe{
+			0%{
+				background: #333;
+				
+			}
+			50%{
+				background: #ccc;
+				width: 400px;
+			}
+			1000%{
+				background: #333;
+				width: 300px;
+			}
+		}
+		.xiao{position: absolute; width: 90px; height: 90px; border-radius: 50%; border:10px solid #f00; border-top-color: #fff; border-left-color:#fff;  box-shadow:0 0 13px 0px #f00;}
+	</style> -->
+	<style>
+		*{ margin:0; padding: 0; }
+		.box{ -webkit-perspective:1000; }
+		.weizhi{ width: 200px; text-align: center; margin:50px auto; }
+		.weizhi a{ background: #333; padding: 5px 15px; color: #fff; margin:5px; text-decoration:none; border-radius: 5px; }
+		ul{ position:relative; width: 200px; height: 200px; transform-style:preserve-3d; margin:200px auto; animation:lifang 80s linear infinite;}
+		li{transition:all 2s ease-out; border-radius: 10px; list-style: none; width: 200px; height: 200px; background: rgba(0,0,0,0.3); text-align: center; line-height: 200px; font-size: 150px; position: absolute; top: 0; left: 0; }
+		li.ss{ width: 100px; height: 100px; position:absolute; top:50%; left: 50%; margin-top: -50px; margin-left: -50px; font-size: 75px; line-height: 100px; background: rgba(0,0,0,0.1); }
+		/* 立方体 */
+		li:nth-child(1){ transform: translateZ(100px); }
+		li:nth-child(2){ transform: rotateY(90deg) translateZ(100px); }
+		li:nth-child(3){ transform: rotateY(-90deg) translateZ(100px); }
+		li:nth-child(4){ transform: rotateX(90deg) translateZ(100px); }
+		li:nth-child(5){ transform: rotateX(-90deg) translateZ(100px); }
+		li:nth-child(6){ transform: translateZ(-100px); }
+		li:nth-child(7){ transform: translateZ(50px); }
+		li:nth-child(8){ transform: rotateY(90deg) translateZ(50px); }
+		li:nth-child(9){ transform: rotateY(-90deg) translateZ(50px); }
+		li:nth-child(10){ transform: rotateX(90deg) translateZ(50px); }
+		li:nth-child(11){ transform: rotateX(-90deg) translateZ(50px); }
+		li:nth-child(12){ transform:  translateZ(-50px); }
+		@keyframes lifang {
+			0%{ transform:rotateY(0deg); }
+			100%{ transform:rotateY(3600deg); }
+		}
+		/*变形*/
+		#bx:target li:nth-child(1){ transform: rotateY(0deg) translateZ(400px); }
+		#bx:target li:nth-child(2){ transform: rotateY(30deg) translateZ(400px); }
+		#bx:target li:nth-child(3){ transform: rotateY(60deg) translateZ(400px); }
+		#bx:target li:nth-child(4){ transform: rotateY(90deg) translateZ(400px); }
+		#bx:target li:nth-child(5){ transform: rotateY(120deg) translateZ(400px); }
+		#bx:target li:nth-child(6){ transform: rotateY(150deg) translateZ(400px); }
+		#bx:target li:nth-child(7){ transform: rotateY(180deg) translateZ(400px); }
+		#bx:target li:nth-child(8){ transform: rotateY(-150deg) translateZ(400px); }
+		#bx:target li:nth-child(9){ transform: rotateY(-120deg) translateZ(400px); }
+		#bx:target li:nth-child(10){ transform: rotateY(-90deg) translateZ(400px); }
+		#bx:target li:nth-child(11){ transform: rotateY(-60deg) translateZ(400px); }
+		#bx:target li:nth-child(12){ transform:  rotateY(-30deg) translateZ(400px); }
+		#bx:target li.ss{ width: 200px; height: 200px; line-height: 200px; font-size: 150px; background: rgba(0,0,0,0.3); top:0; left: 0; margin-top: 0; margin-left: 0;}
+
+	</style>
+</head>
+<body>
+	<!-- <div class="qwe">
+		
+	</div>
+	<div class="asd">
+		
+	</div>
+
+	<div class="da">
+		<div class="xiao"></div>
+	</div> -->
+	<!-- qewqe -->
+	<!-- 立方体变形 -->
+	<div class="weizhi">
+		<a href="#bx">变形</a>
+		<a href="#">还原</a>
+	</div>
+	<div class="box" id="bx">
+		<ul id="hy">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li class="ss">7</li>
+			<li class="ss">8</li>
+			<li class="ss">9</li>
+			<li class="ss">10</li>
+			<li class="ss">11</li>
+			<li class="ss">12</li>
+		</ul>
+	</div>
+</body>
+</html>
